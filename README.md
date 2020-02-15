@@ -1,6 +1,6 @@
 # SoftwareEngineeringProject
 Group : Scrummy <br>
-<div style:"margin-left: 10px">Phpmyadmin</div>
+Phpmyadmin <br>
 Username : 20S2_g6 <br>
 Password : xNib9gFf <br>
 
