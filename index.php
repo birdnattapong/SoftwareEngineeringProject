@@ -20,7 +20,21 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
   <body class="container">
-      
+    <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                    <div class="btn-group">
+                        <a class="dropdown" data-toggle="dropdown" href="#" style="text-decoration: none;"><i class="fa fa-user fa-fw">Role</a> 
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile/editprofile.php">Edit Profile</a>
+                        <a class="dropdown-item" href="payment/receipt.php">Order</a>
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="logout/Logout.php">Logout</a>
+                        </div>
+                        </div>
+            </div>
+        </nav>
+    </header>
     <div class="spacing"></div>
 
     <div class="btn-group">
@@ -215,5 +229,8 @@
                 </tbody>
             </table>
         </div>
+        <footer class="w3-center w3-black w3-padding">
+        <p class="text-center text-muted">SOFTWARE ENGINEERING GROUP6 Scrummy</p>
+        </footer>
 </body>
 </html>
