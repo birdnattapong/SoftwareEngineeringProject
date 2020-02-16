@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <heade>
+<heade>
         <title>Test</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +30,10 @@
             <tr><td> <br><p align="center">
             <b><font size="1">
                 <div id="role_div"></div>
-                <h3 align = 'right'>
-                    <input type="button" id="role_button" value="Role">
+                <h3 align = 'middle'>
+                   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                   &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                   <input type="button" id="role_button" value="Role">
                 </h3>
             </font></b><br></td></tr>
             </table>
