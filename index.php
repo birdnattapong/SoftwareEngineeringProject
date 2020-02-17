@@ -14,13 +14,13 @@
             <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-            <li><a onclick="openTable(event, 'All')">All</a></li>
-            <li><a onclick="openTable(event, 'Computer')">Computer</a></li>
-            <li><a onclick="openTable(event, 'Drone')">Drone</a></li>
-            <li><a onclick="openTable(event, 'Android Tablet')">Android Tablet</a></li>
-            <li><a onclick="openTable(event, 'iPad')">iPad</a></li>
-            <li><a onclick="openTable(event, 'Graphics Tablet')">Graphics Tablet</a></li>
-            <li><a onclick="openTable(event, 'VR Glasses')">VR Glasses</a></li>
+            <li class="drop"><a onclick="openTable(event, 'All')">All</a></li>
+            <li class="drop"><a onclick="openTable(event, 'Computer')">Computer</a></li>
+            <li class="drop"><a onclick="openTable(event, 'Drone')">Drone</a></li>
+            <li class="drop"><a onclick="openTable(event, 'Android Tablet')">Android Tablet</a></li>
+            <li class="drop"><a onclick="openTable(event, 'iPad')">iPad</a></li>
+            <li class="drop"><a onclick="openTable(event, 'Graphics Tablet')">Graphics Tablet</a></li>
+            <li class="drop"><a onclick="openTable(event, 'VR Glasses')">VR Glasses</a></li>
         </ul>
     </div>
 

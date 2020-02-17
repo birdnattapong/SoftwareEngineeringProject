@@ -29,14 +29,14 @@
 
 <body>
     <header>
-    <ul>
+    <ol>
         <li style="float: right; color: #6c757d;">
             <?php $query = "SELECT userRole FROM user WHERE userID = 1";
                 $result = mysqli_query($conn, $query); 
                 $row = mysqli_fetch_array($result);
-                echo "<a>" . $row['userRole'] ."</a>";
+                echo "<a class='h'>" . $row['userRole'] ."</a>";
             ?>
         </li>
-    </ul>     
+    </ol>     
     </header>
 </body>

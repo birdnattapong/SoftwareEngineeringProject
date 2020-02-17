@@ -146,7 +146,7 @@ footer {
     padding-top: 1%;
 }
 
-ul {
+ol {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -154,7 +154,7 @@ ul {
     background-color: #333;
 }
 
-li {
+li .drop{
     float: left;
     border-right: 1px solid #bbb;
 }
@@ -171,8 +171,10 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+ol a:hover:not(.active) {
     background-color: #111;
+    cursor: pointer;
+    color: white;
 }
 
 .active {
