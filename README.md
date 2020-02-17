@@ -6,5 +6,3 @@ Password : xNib9gFf <br>
 
 Product Backlog link : http://bit.ly/38zkwzv <br>
 Sprint Backlog link : http://bit.ly/3bCLp7y
-
-Spec software
