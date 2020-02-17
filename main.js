@@ -23,11 +23,5 @@ function openTable(evt, TableName) {
     }
     document.getElementById(TableName).style.display = "block";
     evt.currentTarget.className += " active";
+    document.getElementsByTagName("button")[0].textContent = TableName;
   }
-
-   $(function(){
-    $(".dropdown-menu li a").click(function(){
-      $(".btn:first-child").text($(this).text());
-      $(".btn:first-child").val($(this).text());
-   });
-});

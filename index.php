@@ -9,7 +9,7 @@
 <body>
     <section class="container">
     <div class="btn-group">
-        <button class="btn">All</button>
+        <button id="shown" class="btn">All</button>
         <button class="btn dropdown-toggle" data-toggle="dropdown">
             <span class="caret"></span>
         </button>
