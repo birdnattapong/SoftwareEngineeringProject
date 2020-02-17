@@ -1,8 +1,8 @@
 <?php
-try {
-$pdo = new PDO("mysql:host=localhost;dbname=20s2_g6;charset=utf8", "20S2_g6", "xNib9gFf");
-$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-echo "เกิดข้อผิดพลาด : " . $e->getMessage();
-}
+    $dbhost = "10.199.66.227";
+    $username = "20S2_g6";
+    $password = "xNib9gFf";
+    $dbname = "20S2_g6";
+
+    $conn = mysqli_connect($dbhost,$username,$password,$dbname) or die("Error: " . mysqli_error($conn));
 ?>
