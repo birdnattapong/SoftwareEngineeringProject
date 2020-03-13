@@ -15,11 +15,20 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <a href="#">
+                    <?php
+                    echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";?>
                     <i class="fas fa-home"></i>
-                    Home
-                    </a>                   
-                </li>                
+                    Home </a>
+                    <?php
+                        echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-wrench"></i>
+                    รายการแจ้งซ่อม</a>
+                    <?php
+                        echo "<a href='borrow_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-hands-helping"></i>
+                    รายการแจ้งยืม</a>               
             </ul>
         </nav>
 
@@ -51,7 +60,7 @@
               </nav>
             
             <div id="content-in">    
-                <div class="pagetag">รายการแจ้งยืมครุภัณฑ์</div>
+                <div class="pagetag">รายการแจ้งยืมครุภัณฑ์&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
                 <div id="All" class="d-flex justify-content-center" class="tabcontent" style="display: block;">
                     <table class="table table-striped table-wrapper-scroll-y my-custom-scrollbar" cellspacing="0" style="width: fit-content !important;">
                         <?php   

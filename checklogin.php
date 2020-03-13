@@ -21,7 +21,8 @@
                 Header("Location: index_administrative.php?id=$id&name=$name");
             }else if($_SESSION["userRole"]=="student"){
                 Header("Location: index_student.php?id=$id&name=$name");
-            }
+            }else if($_SESSION["userRole"]=="admin"){
+            	Header("Location: index_admin.php?id=$id&name=$name");}
         }else{
             echo "<script>";
                 echo "alert(\" username หรือ password ไม่ถูกต้อง\");"; 
