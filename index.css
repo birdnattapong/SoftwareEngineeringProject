@@ -29,6 +29,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
+<<<<<<< HEAD
     margin-bottom: 20px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -38,6 +39,12 @@ a:focus {
     margin-bottom: 20px;
 }
 
+=======
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+>>>>>>> 6dcd358a543bc4f02306e0336d762064775af8c2
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -720,6 +727,7 @@ nav.navbar {
     width: 120px;
 }
 /* -----------------------------------------*/
+<<<<<<< HEAD
 /* ------- TABLE borrowreq + fixreq ------- */
 .RequestIDth{
   width: 100px;
@@ -764,3 +772,7 @@ nav.navbar {
   margin-left: 15px;
 }
 /* -----------------------------------------*/
+=======
+
+  
+>>>>>>> 6dcd358a543bc4f02306e0336d762064775af8c2
