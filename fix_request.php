@@ -14,12 +14,24 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#">
+                <li>
+                    <?php
+                    echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";?>
                     <i class="fas fa-home"></i>
-                    Home
-                    </a>                   
-                </li>                
+                    Home </a>
+                    <?php
+                        echo "<a href='borrow_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-hands-helping"></i>
+                    รายการแจ้งยืม</a> 
+                </li>
+                <li class="active">
+                    <?php
+                        echo "<a href='fix_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-wrench"></i>
+                    รายการแจ้งซ่อม</a> 
+                </li>             
             </ul>
         </nav>
 
@@ -77,7 +89,7 @@
                                     echo "<td class='DeviceNameth'>" .$row['deviceName']. "</td>";
                                     echo "<td class='Fixdetailth'>" .$row['FixDetail']. "</td>";
                                     echo "<td class='RequestDateth'>" .$row['RequestDate']. "</td>";
-                                    echo "<td class='Actionth'><button type='button' class='ApproveButt'>Approve</button><button type='button' class='DisapproveButt'>Disapprove</button></td>";
+                                    echo "<td class='Actionth'><button type='button' class='ApproveButt' onclick='alertConfirmAprrove()'>Approve</button><button type='button' class='DisapproveButt' onclick='alertConfirmDisaprrove()'>Disapprove</button></td>";
                                     echo "</tr>";
                                 }
                             ?>

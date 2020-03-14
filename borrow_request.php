@@ -14,21 +14,26 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="active">
+                <li>
                     <?php
                     echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";?>
                     <i class="fas fa-home"></i>
                     Home </a>
-                    <?php
-                        echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";
-                    ?>
-                    <i class="fas fa-wrench"></i>
-                    รายการแจ้งซ่อม</a>
+                </li>
+                <li class="active">
                     <?php
                         echo "<a href='borrow_request.php?id=" . $id . "&name=" .$name. "'>";
                     ?>
                     <i class="fas fa-hands-helping"></i>
-                    รายการแจ้งยืม</a>               
+                    รายการแจ้งยืม</a>
+                </li>
+                <li>
+                    <?php
+                        echo "<a href='fix_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-wrench"></i>
+                    รายการแจ้งซ่อม</a> 
+                </li>            
             </ul>
         </nav>
 
@@ -60,7 +65,7 @@
               </nav>
             
             <div id="content-in">    
-                <div class="pagetag">รายการแจ้งยืมครุภัณฑ์&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</div>
+                <div class="pagetag">รายการแจ้งยืมครุภัณฑ์</div>
                 <div id="All" class="d-flex justify-content-center" class="tabcontent" style="display: block;">
                     <table class="table table-striped table-wrapper-scroll-y my-custom-scrollbar" cellspacing="0" style="width: fit-content !important;">
                         <?php   
@@ -84,7 +89,7 @@
                                     echo "<td class='DeviceIDth'>" .$row['deviceID']. "</td>";          
                                     echo "<td class='DeviceNameth'>" .$row['deviceName']. "</td>";
                                     echo "<td class='RequestDateth'>" .$row['RequestDate']. "</td>";
-                                    echo "<td class='Actionth'><button type='button' class='ApproveButt'>Approve</button><button type='button' class='DisapproveButt'>Disapprove</button></td>";
+                                    echo "<td class='Actionth'><button type='button' class='ApproveButt' onclick='return alertConfirmAprrove()'>Approve</button><button type='button' class='DisapproveButt' onclick='alertConfirmDisaprrove()'>Disapprove</button></td>";
                                     echo "</tr>";
                                 }
                             ?>

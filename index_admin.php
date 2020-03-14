@@ -20,16 +20,19 @@
                     echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";?>
                     <i class="fas fa-home"></i>
                     Home </a>
-                    <?php
-                        echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";
-                    ?>
-                    <i class="fas fa-wrench"></i>
-                    รายการแจ้งซ่อม</a>
+                </li>
+                <li>
                     <?php
                         echo "<a href='borrow_request.php?id=" . $id . "&name=" .$name. "'>";
                     ?>
                     <i class="fas fa-hands-helping"></i>
-                    รายการแจ้งยืม</a>               
+                    รายการแจ้งยืม</a> 
+                    <?php
+                        echo "<a href='fix_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-wrench"></i>
+                    รายการแจ้งซ่อม</a> 
+                </li>     
             </ul>
         </nav>
 
@@ -87,7 +90,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                             <input type="submit" name="submit" class="btn btn-primary" onclick="return confirm('Do you want to add device type?\n')" value="Add Device Type" />
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancle</button>   
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancel</button>   
                                                         </div>  
                                                             <input type="hidden" name='id' value="<?php echo $id; ?>">
                                                             <input type="hidden" name='name' value="<?php echo $name; ?>">
@@ -138,7 +141,7 @@
                                             </div>            
                                             <div class="modal-footer">
                                             <input type="submit" name="submit" class="btn btn-primary" onclick="return confirm('Do you want to add device Item?\n')" value="Add Device" />
-                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancle</button>   
+                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancel</button>   
                                                 </div>  
                                             <input type="hidden" name='id' value="<?php echo $id; ?>">
                                             <input type="hidden" name='name' value="<?php echo $name; ?>">

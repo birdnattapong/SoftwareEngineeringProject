@@ -43,3 +43,10 @@ $(document).ready(function () {
   });
   $('.dataTables_length').addClass('bs-select');
   });
+
+function alertConfirmAprrove(){
+  confirm("Do you want to aprrove?");
+}
+function alertConfirmDisaprrove(){
+  confirm("Do you want to disaprrove?");
+}
