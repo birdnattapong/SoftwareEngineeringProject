@@ -6,7 +6,7 @@
 ?>
 
 
-    <div class="wrapper">
+<div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -59,7 +59,9 @@
                   </div>
                 </div>
               </nav>
-                        <div style="padding-top: 10px; padding-left: 80px">รายการครุภัณฑ์ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              <div id="content-in">    
+                <div class="pagetag">
+                        <div style="padding-top: 10px; padding-left: 80px">รายการครุภัณฑ์ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
  			<!-- <button type="button" class="btn btn-warning" >Add Device Type</button>&ensp; -->
 
 
@@ -183,7 +185,7 @@
                                 while ($row = mysqli_fetch_array($result)) {           
                                     echo "<tr>";
                                     echo "<td class='notd'>" . $i . "</td>";
-                                    echo "<td ><a href='detail_administrative.php?deviceName=" .$row['deviceName'] . "&id=". $id . "&name=". $name ."'> ". $row['deviceName'] . "</a></td>";            
+                                    echo "<td ><a href='detail_admin.php?deviceName=" .$row['deviceName'] . "&id=". $id . "&name=". $name ."'> ". $row['deviceName'] . "</a></td>";            
                                     echo "<td class='typetd'>" . $row['deviceTypeName'] . "</td>";          
                                     echo "<td class='amounttd'>" . $row['count_rec'] . "</td>";
                                     echo "</tr>";
