@@ -96,7 +96,7 @@
                                                     </div>
                                                     &ensp; 
 
-                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo1">Add Device Name</button>
+                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo1">Add Device Item</button>
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document1">
                                     <div class="modal-content">
