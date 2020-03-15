@@ -20,16 +20,19 @@
                     echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";?>
                     <i class="fas fa-home"></i>
                     Home </a>
-                    <?php
-                        echo "<a href='index_admin.php?id=" . $id . "&name=" .$name. "'>";
-                    ?>
-                    <i class="fas fa-wrench"></i>
-                    รายการแจ้งซ่อม</a>
+                </li>
+                <li>
                     <?php
                         echo "<a href='borrow_request.php?id=" . $id . "&name=" .$name. "'>";
                     ?>
                     <i class="fas fa-hands-helping"></i>
-                    รายการแจ้งยืม</a>               
+                    รายการแจ้งยืม</a> 
+                    <?php
+                        echo "<a href='fix_request.php?id=" . $id . "&name=" .$name. "'>";
+                    ?>
+                    <i class="fas fa-wrench"></i>
+                    รายการแจ้งซ่อม</a> 
+                </li>     
             </ul>
         </nav>
 
@@ -117,8 +120,8 @@
                                     echo "<td ><span class='badge badge-danger'>" . $row['status'] . "</span></td>";
                                 } elseif ($row['status'] == 'Discharge') {
                                     echo "<td ><span class='badge badge-dark'>" . $row['status'] . "</span></td>";
-                                } elseif ($row['status'] == 'RequestForBorrow') {
-                                    echo "<td ><span class='badge badge-light'>" . $row['status'] . "</span></td>";
+                                } elseif ($row['status'] == 'RequestBorrow') {
+                                    echo "<td ><span class='badge badge-dark'>" . $row['status'] . "</span></td>";
                                 } else {
                                     echo "<td > - </td>";
                                 }

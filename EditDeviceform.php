@@ -119,8 +119,11 @@
 											<?php if($row['status']!='NotAvailable'){
 											echo "<option value='NotAvailable'>NotAvailable</option>";
 											}?>
+                                            <?php if($row['status']!='RequestBorrow'){
+											echo "<option value='RequestBorrow'>RequestBorrow</option>";
+											}?>
 											<?php if($row['status']!='RequestforRepair'){
-											echo "<option value='RequestforRepair'>RequestforRepair</option>";
+											echo "<option value='RequestforRepair'>RequestForBorrow</option>";
 											}?>
 											<?php if($row['status']!='SendforRepair'){
 											echo "<option value='SendforRepair'>SendforRepair</option>";
