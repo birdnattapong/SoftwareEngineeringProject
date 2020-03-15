@@ -120,7 +120,7 @@
                                     echo "<td ><span class='badge badge-danger'>" . $row['status'] . "</span></td>";
                                 } elseif ($row['status'] == 'Discharge') {
                                     echo "<td ><span class='badge badge-dark'>" . $row['status'] . "</span></td>";
-                                } elseif ($row['status'] == 'RequestBorrow') {
+                                } elseif ($row['status'] == 'RequestForBorrow') {
                                     echo "<td ><span class='badge badge-dark'>" . $row['status'] . "</span></td>";
                                 } else {
                                     echo "<td > - </td>";

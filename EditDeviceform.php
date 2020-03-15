@@ -119,7 +119,7 @@
 											<?php if($row['status']!='NotAvailable'){
 											echo "<option value='NotAvailable'>NotAvailable</option>";
 											}?>
-                                            <?php if($row['status']!='RequestBorrow'){
+                                            <?php if($row['status']!='RequestForBorrow'){
 											echo "<option value='RequestBorrow'>RequestBorrow</option>";
 											}?>
 											<?php if($row['status']!='RequestforRepair'){
