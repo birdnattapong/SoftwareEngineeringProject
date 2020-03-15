@@ -81,16 +81,28 @@
                             </tr>
                             </thead>
                             <tbody>";
-                                while ($row = mysqli_fetch_array($result)) {           
+                                while ($row = mysqli_fetch_array($result)) {    
+                                    $requestID = $row['FixRequestID'];
+                                    $informer = $row['Name'];
+                                    $deviceID = $row['deviceID'];
+                                    $deviceName = $row['deviceName'];
+                                    $fixDetail = $row['FixDetail'];
+                                    $requestDate = $row['RequestDate']; 
+                                    echo "<form method='GET' action='FunCapproveFix.php'>";       
                                     echo "<tr>";
-                                    echo "<td class='RequestIDth'>" .$row['FixRequestID']. "</td>";
-                                    echo "<td class='Informerth'>" .$row['Name']. "</td>";            
-                                    echo "<td class='DeviceIDth'>" .$row['deviceID']. "</td>";          
-                                    echo "<td class='DeviceNameth'>" .$row['deviceName']. "</td>";
-                                    echo "<td class='Fixdetailth'>" .$row['FixDetail']. "</td>";
-                                    echo "<td class='RequestDateth'>" .$row['RequestDate']. "</td>";
-                                    echo "<td class='Actionth'><button type='button' class='ApproveButt' onclick='alertConfirmAprrove()'>Approve</button><button type='button' class='DisapproveButt' onclick='alertConfirmDisaprrove()'>Disapprove</button></td>";
+                                    echo "<input type='hidden' name='FixRequestID' value='$requestID'><td class='RequestIDth'>" .$requestID. "</td>";
+                                    echo "<input type='hidden' name='NameFix' value='$informer'><td class='Informerth'>" .$informer. "</td>";            
+                                    echo "<input type='hidden' name='deviceID' value='$deviceID'><td class='DeviceIDth'>" .$deviceID. "</td>";          
+                                    echo "<td class='DeviceNameth'>" .$deviceName. "</td>";
+                                    echo "<input type='hidden' name='FixDetail' value='$fixDetail'><td class='Fixdetailth'>" .$fixDetail. "</td>";
+                                    echo "<input type='hidden' name='RequestDate' value='$requestDate'><td class='RequestDateth'>" .$requestDate. "</td>";
+                                    echo "<input type='hidden' name='id' value='$id'>";
+                                    echo "<input type='hidden' name='name' value='$name'>";
+                            ?>
+                                    <td class='Actionth'><input type='submit' name='action' class='ApproveButt' value='Approve' onclick="return confirm('Do you want to approve?\n')"><input type='submit' name='action' class='DisapproveButt' value='Disapprove' onclick="return confirm('Do you want to disapprove?\n')"></td>
+                            <?php      
                                     echo "</tr>";
+                                    echo "</form>";
                                 }
                             ?>
                         </tbody>

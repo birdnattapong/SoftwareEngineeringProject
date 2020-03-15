@@ -10,19 +10,33 @@
     $BorrowRequestID = $_GET['BorrowRequestID'];
     $NameBorrower = $_GET['NameBorrower'];
     $RequestDate = $_GET['RequestDate'];
-    
+    $action = $_GET['action'];
 
-    echo $DeviceID,$BorrowRequestID,$NameBorrower,$RequestDate,$name,$id;
+    if($action == "Approve"){
+      echo $DeviceID,$BorrowRequestID,$NameBorrower,$RequestDate,$name,$id;
       $res = mysqli_query($conn, "SELECT * FROM Device,DeviceType WHERE device.deviceType=devicetype.typeID AND deviceID='$DeviceID'");
       $row = mysqli_fetch_assoc($res);
 
-       $sql = "UPDATE device SET address='$NameBorrower',status='Borrowed',device_duedate1='$RequestDate' WHERE deviceID='$DeviceID';";
-       $conn->query($sql);
-       $sql = "DELETE FROM borrowrequest WHERE BorrowRequestID='$BorrowRequestID';";
-       $conn->query($sql);
-       echo " <form method='GET' action='borrow_request.php?id=$id.'&name=$name'>
-       <input type='hidden' name='id' value='".$id."'>
-       <input type='hidden' name='name' value='".$name."'> </form>";
+      $sql = "UPDATE device SET address='$NameBorrower',status='Borrowed',device_duedate1='$RequestDate' WHERE deviceID='$DeviceID';";
+      $conn->query($sql);
+      $sql = "DELETE FROM borrowrequest WHERE BorrowRequestID='$BorrowRequestID';";
+      $conn->query($sql);
+      echo " <form method='GET' action='borrow_request.php?id=$id&name=$name'>
+      <input type='hidden' name='id' value='".$id."'>
+      <input type='hidden' name='name' value='".$name."'> </form>";
+    } else if($action == "Disapprove"){
+      $res = mysqli_query($conn, "SELECT * FROM Device,DeviceType WHERE device.deviceType=devicetype.typeID AND deviceID='$DeviceID'");
+      $row = mysqli_fetch_assoc($res);
+
+      $sql = "UPDATE device SET status='Available' WHERE deviceID='$DeviceID';";
+      $conn->query($sql);
+      $sql = "DELETE FROM borrowrequest WHERE BorrowRequestID='$BorrowRequestID';";
+      $conn->query($sql);
+      echo " <form method='GET' action='borrow_request.php?id=$id&name=$name'>
+      <input type='hidden' name='id' value='".$id."'>
+      <input type='hidden' name='name' value='".$name."'> </form>";
+    }
+    
 ?>
 		 <script>
 		 document.getElementsByTagName("form")[0].submit();

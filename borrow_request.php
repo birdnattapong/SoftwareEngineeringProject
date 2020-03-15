@@ -82,17 +82,26 @@
                             </tr>
                             </thead>
                             <tbody>";
-                                while ($row = mysqli_fetch_array($result)) {           
+                                while ($row = mysqli_fetch_array($result)) {   
+                                    $requestID = $row['BorrowRequestID'];
+                                    $informer = $row['Name'];
+                                    $deviceID = $row['deviceID'];
+                                    $deviceName = $row['deviceName'];
+                                    $requestDate = $row['RequestDate']; 
+                                    echo "<form method='GET' action='FunCBorrowRequest.php'>";
                                     echo "<tr>";
-                                    echo "<td class='RequestIDth'>" .$row['BorrowRequestID']. "</td>";
-                                    echo "<td class='Informerth'>" .$row['Name']. "</td>";            
-                                    echo "<td class='DeviceIDth'>" .$row['deviceID']. "</td>";          
-                                    echo "<td class='DeviceNameth'>" .$row['deviceName']. "</td>";
-                                    echo "<td class='RequestDateth'>" .$row['RequestDate']. "</td>";
+                                    echo "<input type='hidden' name='BorrowRequestID' value='$requestID'><td class='RequestIDth'>" .$requestID. "</td>";
+                                    echo "<input type='hidden' name='NameBorrower' value='$informer'><td class='Informerth'>" .$informer. "</td>";            
+                                    echo "<input type='hidden' name='deviceID' value='$deviceID'><td class='DeviceIDth'>" .$deviceID. "</td>";          
+                                    echo "<td class='DeviceNameth'>" .$deviceName. "</td>";
+                                    echo "<input type='hidden' name='RequestDate' value='$requestDate'><td class='RequestDateth'>" .$requestDate. "</td>";
+                                    echo "<input type='hidden' name='id' value='$id'>";
+                                    echo "<input type='hidden' name='name' value='$name'>";
                             ?>
-                                    <td class='Actionth'><button type='button' class='ApproveButt' onclick="return confirm('Do you want to approve?\n')">Approve</button><button type='button' class='DisapproveButt' onclick=''>Disapprove</button></td>
-                            <?php
+                                    <td class='Actionth'><input type='submit' name='action' class='ApproveButt' value='Approve' onclick="return confirm('Do you want to approve?\n')"><input type='submit' name='action' class='DisapproveButt' value='Disapprove' onclick="return confirm('Do you want to disapprove?\n')"></td>
+                            <?php        
                                     echo "</tr>";
+                                    echo "</form>";
                                 }
                             ?>
                         </tbody>
