@@ -2,18 +2,12 @@
     include "connection.php";
     $name = $_GET['name'];
     $id = $_GET['id'];
-    $typeID = $_GET['TypeID'];
-    $typeName = $_GET['TypeName'];
-	
+    $deviceID= $_GET['deviceID'];
+
 	//echo $name,$id,$typeID ,$typeName;
 
-
-
-    if ($stmt = mysqli_prepare($conn, "INSERT INTO devicetype (typeID, typeName) VALUES (?, ?)"));
-    mysqli_stmt_bind_param($stmt, 'ss', $typeID, $typeName);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    mysqli_close($conn);
+        $sql = "DELETE FROM device WHERE deviceID='$deviceID';";
+        $conn->query($sql);
     //header("location: index_admin.php?id=$id.'&name=$name");
     echo " <form method='GET' action='index_admin.php?id=$id.'&name=$name'>
     <input type='hidden' name='id' value='".$id."'>

@@ -6,7 +6,7 @@
     $name = $_GET['name'];
 ?>
 
-    <div class="wrapper">
+<div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -69,14 +69,14 @@
                             $result = mysqli_query($conn, $count); 
                             echo "<thead class='table-success'>
                             <tr>
-                                <th scope='col' >ID</th>
-                                <th scope='col' >Name</th>
-                                <th scope='col' class='DeviceNameth' >Detail</th>
-                                <th scope='col' >Address</th>
-                                <th scope='col' >ผู้ยืม</th>
-                                <th scope='col' >Due date</th>
-                                <th scope='col' >Status</th>
-                                <th scope='col' >action</th>
+                            <th scope='col' >ID</th>
+                            <th scope='col' >Name</th>
+                            <th scope='col' class='DeviceNameth' >Detail</th>
+                            <th scope='col' >Address</th>
+                            <th scope='col' >ผู้ยืม</th>
+                            <th scope='col' >Due date</th>
+                            <th scope='col' >Status</th>
+                            <th scope='col' >action</th>
                             </tr>
                             </thead>
                             <tbody>";
@@ -84,9 +84,20 @@
                                 echo "<tr>";
                                 echo "<td scope='row'>" . $row['deviceID'] . "</td>";
                                 echo "<td >" . $row['deviceName'] . "</td>";             
-                                echo "<td >" . $row['detail'] . "</td>";
-                                echo "<td >" . $row['address'] . "</td>";             
-                                echo "<td >" . $row['address'] . "</td>";        
+                                echo "<td >" . $row['detail']."</td>";
+                                if ($row['status'] == 'Borrowed') {
+                                    echo "<td > - </td>";
+                                } else {
+                                    echo "<td >" .$row['address'] . "</td>"; 
+                                }
+                                if ($row['status'] == 'Borrowed') {
+                                    echo "<td >" .$row['address'] . "</td>";
+                                } else {
+                                    echo  "<td > - </td>";
+                                }            
+                                //echo "<td >" . $row['address'] . "</td>";
+                                //echo "<td >" . $row['address'] . "</td>";
+                                        
                                 if ($row['device_duedate1'] == '0000-00-00') {
                                     echo "<td > - </td>";
                                 } else {
@@ -109,38 +120,24 @@
                                 } else {
                                     echo "<td > - </td>";
                                 }
-                                echo "<td> 
-                                <button type='button' class='btn btn-warning' data-toggle='modal' data-target='#exampleModal' data-whatever='@mdo1'>Add Device Item</button>
-                                <div class='modal fade' id='exampleModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true'>
-                                <div class='modal-dialog' role='document1'>
-                                    <div class='modal-content'>
-                                    <div class='modal-header'>
-                                        <h5 class='modal-title' id='exampleModalLabel'>Add device item</h5>
-                                        <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
-                                        <span aria-hidden='true'>&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class='modal-body'>
-                                        <form method='POST'>
-                                        <div class='form-group'>                                                        
-                                            <label for='recipient-name' class='col-form-label'>Device ID </label>";
-                                            echo "<input type='text'value=". $row[DeviceID]. "class='form-control' name='DeviceID' id='DeviceID'>
-                                            
-                                        </div>
-                                        
-                                        
-                                        
-                                        ";
-                                echo "</td>";
-                                
+                                echo "<td>
+                                <form method='GET' action='EditDeviceform.php' >
+                                <input type='hidden' name='deviceID' value='".$row['deviceID']."'>
+                                <input type='hidden' name='id' value='".$id."'>
+                                <input type='hidden' name='name' value='".$name."'>
+                                <input type='submit' name='submit' class='btn btn-primary' value='แก้ไข' />
+                                </form> ";
+                                echo "<form method='GET' action='DeleteDevice.php' scope='col'>
+                                <input type='hidden' name='deviceID' value='".$row['deviceID']."'>
+                                <input type='hidden' name='id' value='".$id."'>
+                                <input type='hidden' name='name' value='".$name."'>";
+                                echo "<input type='submit' name='submit' class='btn btn-warning' onclick='return confirm('Do you want to delete device Item?\n')' value='ลบ' />
+                                </form>";
+                                echo"</td>";                                                
+                                echo "</tr>";
+
                             }
                             ?>
-                            
-
-                            </tr>
-                            
-                            
-                            
                         </tbody>
                     </table>
                 </div>            

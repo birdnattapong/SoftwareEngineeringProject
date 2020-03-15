@@ -62,12 +62,13 @@
                             $result = mysqli_query($conn, $count); 
                             echo "<thead class='table-success'>
                             <tr>
-                                <th scope='col' >ID</th>
-                                <th scope='col' >Name</th>
-                                <th scope='col' >Detail</th>
-                                <th scope='col' >Address</th>
-                                <th scope='col' >Due date</th>
-                                <th scope='col' >Status</th>
+                            <th scope='col' >ID</th>
+                            <th scope='col' >Name</th>
+                            <th scope='col' class='DeviceNameth' >Detail</th>
+                            <th scope='col' >Address</th>
+                            <th scope='col' >ผู้ยืม</th>
+                            <th scope='col' >Due date</th>
+                            <th scope='col' >Status</th>
                             </tr>
                             </thead>
                             <tbody>";
@@ -75,12 +76,20 @@
                                 echo "<tr>";
                                 echo "<td scope='row'>" . $row['deviceID'] . "</td>";
                                 echo "<td >" . $row['deviceName'] . "</td>";             
-                                echo "<td >" . $row['detail'] . "</td>"; 
+                                echo "<td >" . $row['detail']."</td>";
                                 if ($row['status'] == 'Borrowed') {
                                     echo "<td > - </td>";
                                 } else {
-                                    echo "<td >" . $row['address'] . "</td>"; 
-                                }               
+                                    echo "<td >" .$row['address'] . "</td>"; 
+                                }
+                                if ($row['status'] == 'Borrowed') {
+                                    echo "<td >-</td>";
+                                } else {
+                                    echo  "<td > - </td>";
+                                }            
+                                //echo "<td >" . $row['address'] . "</td>";
+                                //echo "<td >" . $row['address'] . "</td>";
+                                        
                                 if ($row['device_duedate1'] == '0000-00-00') {
                                     echo "<td > - </td>";
                                 } else {
@@ -102,7 +111,7 @@
                                     echo "<td ><span class='badge badge-dark'>" . $row['status'] . "</span></td>";
                                 } else {
                                     echo "<td > - </td>";
-                                }                                   
+                                }                                 
                                 echo "</tr>";
                             }
                             ?>

@@ -88,12 +88,12 @@
                                                                 <label for="message-text" class="col-form-label">Type Name</label>
                                                                 <input type="text" class="form-control" id="TypeName" name="TypeName">
                                                             </div>
+															<input type="hidden" name='id' value="<?php echo $id; ?>">
+                                                            <input type="hidden" name='name' value="<?php echo $name; ?>">
                                                             <div class="modal-footer">
                                                             <input type="submit" name="submit" class="btn btn-primary" onclick="return confirm('Do you want to add device type?\n')" value="Add Device Type" />
-                                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancel</button>   
                                                         </div>  
-                                                            <input type="hidden" name='id' value="<?php echo $id; ?>">
-                                                            <input type="hidden" name='name' value="<?php echo $name; ?>">
+                                                            
                                                             </form>
                                                         </div>
                                                         </div>
@@ -112,7 +112,7 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form method="POST" action="FuncAddDevice.php">
+                                        <form method="GET" action="FuncAddDevice.php">
                                         <div class="form-group">                                                        
                                             <label for="recipient-name" class="col-form-label">Device ID </label>
                                             <input type="text" class="form-control" name="DeviceID" id="DeviceID">
@@ -141,7 +141,6 @@
                                             </div>            
                                             <div class="modal-footer">
                                             <input type="submit" name="submit" class="btn btn-primary" onclick="return confirm('Do you want to add device Item?\n')" value="Add Device" />
-                                            <button type="button" class="btn btn-secondary" data-dismiss="moda0">Cancel</button>   
                                                 </div>  
                                             <input type="hidden" name='id' value="<?php echo $id; ?>">
                                             <input type="hidden" name='name' value="<?php echo $name; ?>">
