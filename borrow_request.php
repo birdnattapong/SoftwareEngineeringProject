@@ -89,7 +89,9 @@
                                     echo "<td class='DeviceIDth'>" .$row['deviceID']. "</td>";          
                                     echo "<td class='DeviceNameth'>" .$row['deviceName']. "</td>";
                                     echo "<td class='RequestDateth'>" .$row['RequestDate']. "</td>";
-                                    echo "<td class='Actionth'><button type='button' class='ApproveButt' onclick='return alertConfirmAprrove()'>Approve</button><button type='button' class='DisapproveButt' onclick='alertConfirmDisaprrove()'>Disapprove</button></td>";
+                            ?>
+                                    <td class='Actionth'><button type='button' class='ApproveButt' onclick="return confirm('Do you want to approve?\n')">Approve</button><button type='button' class='DisapproveButt' onclick=''>Disapprove</button></td>
+                            <?php
                                     echo "</tr>";
                                 }
                             ?>
