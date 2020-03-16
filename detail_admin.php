@@ -135,10 +135,9 @@
                                 echo "<form method='GET' action='DeleteDevice.php' scope='col'>
                                 <input type='hidden' name='deviceID' value='".$row['deviceID']."'>
                                 <input type='hidden' name='id' value='".$id."'>
-                                <input type='hidden' name='name' value='".$name."'>";
-                                echo "<input type='submit' name='submit' class='btn btn-warning' onclick='return confirm('Do you want to delete device Item?\n')' value='ลบ' />
-                                </form>";
-                                echo"</td>";                                                
+                                <input type='hidden' name='name' value='".$name."'>";?>
+                                <input type='submit' name='submit' class='btn btn-warning' onclick="return confirm('Do you want to delete device Item?\n')" value='ลบ' /> </form>
+                                <?php echo "</td>";                                                
                                 echo "</tr>";
 
                             }
