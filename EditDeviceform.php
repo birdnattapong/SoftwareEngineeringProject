@@ -150,7 +150,7 @@
                                         </div>&ensp;
         </div><div class="spacing2"></div>
         </div>
-        </div><div class="spacing2"></div>
+        </div>
     </div>
      
     <?php include "footer.php"; ?>
